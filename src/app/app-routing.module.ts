@@ -14,6 +14,7 @@ import { ListCongesComponent } from './Interfaces/RH/list-conges/list-conges.com
 import { DemandeCongeComponent } from './Interfaces/Employe/demande-conge/demande-conge.component';
 import { DemandeDemissionComponent } from './Interfaces/Employe/demande-demission/demande-demission.component';
 import { CreerCommentComponent } from './Interfaces/RH/creer-comment/creer-comment.component';
+import { ListDemissionComponent } from './Interfaces/RH/list-demission/list-demission.component';
 
 const routes: Routes = [
   { path: '', title: 'home Entreprise', component: HomeComponent },
@@ -42,7 +43,8 @@ const routes: Routes = [
   {path:"listConge",title:"list conges",component:ListCongesComponent},
   {path:"demandeConge/:id",title:"demande conge",component:DemandeCongeComponent},
   {path:"demandeDemisson/:id",title:"demande demision",component:DemandeDemissionComponent},
-  {path:"comment/:id",title:"comment",component:CreerCommentComponent}
+  {path:"comment/:id",title:"comment",component:CreerCommentComponent},
+  {path:"listDemission",title:" list desmision",component:ListDemissionComponent}
 
 
 ];
