@@ -1,0 +1,23 @@
+<app-navbar-emp></app-navbar-emp>
+<div class="demande-conge">
+ 
+    <h2>Demande de Congé</h2>
+    <form [formGroup]="demandeCongeForm" (ngSubmit)=" createLeaveRequest()">
+      <div class="form-group">
+        <label for="date">startDate:</label>
+        <input type="date" id="startDate" formControlName="startDate" required />
+      </div>
+     
+      <div class="form-group">
+        <label for="heure">endDate:</label>
+        <input type="date" id="endDate" formControlName="endDate" required />
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" formControlName="description" required></textarea>
+      </div>
+      <button type="submit" [disabled]="!demandeCongeForm.valid">Demander Congé</button>
+    </form>
+  </div>
+  
+

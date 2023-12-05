@@ -1,0 +1,39 @@
+
+<!-- liste-demissions.component.html -->
+<app-navbar></app-navbar>
+<div class="card divConge" >
+<div class="card-body">
+    <div class="chart-area">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID Employe</th>
+                        <th scope="col">submission Date</th>
+                        <th scope="col">reason</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <ng-container *ngFor="let demission of demissions">
+        <tr>
+   
+      <th scope="row">{{ demission.employe }}</th>
+      <td>{{ demission.submissionDate }} </td>
+        <td>{{ demission.reason }}</td>
+      <td>
+      <button (click)="approveDemission(demission.employe.id,demission.id)">Valider</button>
+    </td>
+    <td>
+
+      <button (click)="rejectDemission(demission.employe.id,demission.id)">Rejeter</button>
+    </td>
+   </tr>
+</ng-container>
+                </tbody>
+                      </table>
+        </div>
+    </div>
+</div>
+</div>

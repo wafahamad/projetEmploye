@@ -1,0 +1,13 @@
+<app-navbar-emp></app-navbar-emp>
+<div class="divDemission">
+  <h2>Demission Request</h2>
+
+  <!-- Form to capture demission details -->
+  <form [formGroup]="demissionForm" (ngSubmit)="submitDemission()" >
+    <label for="reason">Votre Raison (lettre de démission):</label>
+    <input type="text" id="reason" formControlName="reason" class="form-control" required>
+    <div class="space"></div>
+    <button type="submit" [disabled]="!demissionForm.valid" class="btn btn-success">Submit Demission</button>
+  </form>
+</div>
+

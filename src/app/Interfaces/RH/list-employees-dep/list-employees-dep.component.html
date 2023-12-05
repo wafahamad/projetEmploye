@@ -1,0 +1,49 @@
+
+<app-navbar></app-navbar>
+<div class="card-body tabEmp">
+    <div>
+        <button>Add new Employe</button>
+    </div>
+    <div class="chart-area">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prénom </th>
+                        <th scope="col">Departement</th>
+
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of employes">
+                        <th scope="row">{{emp.id}}</th>
+                        <td>{{emp.nom}}</td>
+                        <td>{{emp.prenom}}</td>
+                        <td>{{emp.departement}}</td>
+
+                        <td>
+                            <a class="btn btn-sm btn-primary" routerLink="/performingEmp/{{emp.id}}">View</a>
+                        </td>
+                        <td >
+                            <a class="btn btn-sm btn-primary" routerLink="/editeEmploye/{{emp.id}}" >Modify</a>
+                        </td>
+                        <div id="myModal" class="modal" style="display: block" *ngIf="testM">
+                            <!-- Modal content -->
+                            
+                        </div>
+                        <td>
+                            <a class="btn btn-sm btn-primary" >delete</a>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

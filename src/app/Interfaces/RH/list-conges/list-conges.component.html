@@ -1,0 +1,40 @@
+<!-- liste-conges.component.html -->
+<app-navbar></app-navbar>
+<div class="card divConge" >
+<div class="card-body">
+    <div class="chart-area">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">date conge</th>
+                        <th scope="col">heure</th>
+                            <th scope="col"> description</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <ng-container *ngFor="let conge of conges">
+        <tr>
+   
+      <th scope="row">{{ conge.employeid }}</th>
+      <td>{{ conge.endDate }} </td>
+        <td>{{ conge.startDate }}</td>
+      <td>{{ conge.description }}</td>
+      <td>
+      <button (click)="validerConge(conge.id)">Valider</button>
+    </td>
+    <td>
+
+      <button (click)="onRejectLeaveRequest(conge.id)">Rejeter</button>
+    </td>
+   </tr>
+</ng-container>
+                </tbody>
+                      </table>
+        </div>
+    </div>
+</div>
+</div>

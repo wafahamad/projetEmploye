@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<div>
+    <h2>Create Comment</h2>
+    <form [formGroup]="commentForm" (ngSubmit)="submitComment()">
+      <label for="content">Content:</label>
+      <input type="text" id="content" formControlName="content" required>
+  
+      <button type="submit" [disabled]="!commentForm.valid">Submit Comment</button>
+    </form>
+  </div>

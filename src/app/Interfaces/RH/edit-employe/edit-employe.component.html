@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<main class="formM ">
+  <form [formGroup]="formModifier">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">nom</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="nom"
+        formControlName="nom"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">prenom</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="prenom"
+        formControlName="prenom"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">poste</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="poste"
+        formControlName="poste"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">adresse</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="adresse"
+        formControlName="adresse"   
+      />
+    </div>
+    <div>
+      <button (click)="update()" class="btn btn-dark">change</button>
+    </div>
+  </form>
+  
+ 
+</main>
