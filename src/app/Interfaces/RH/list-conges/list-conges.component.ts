@@ -21,11 +21,12 @@ export class ListCongesComponent implements OnInit {
     this.congeService.rejectLeaveRequest(idConge).subscribe(
       response => {
         // Handle success, if needed
-        console.log('Leave request rejected successfully');
+        alert('Leave request rejected successfully');
       },
       error => {
         // Handle error, if needed
         console.error('Error rejecting leave request:', error);
+        alert('Error rejecting leave request');
       }
     );
   }
@@ -33,11 +34,12 @@ export class ListCongesComponent implements OnInit {
     this.congeService.validerConge(idConge).subscribe(
       response => {
         // Handle success, if needed
-        console.log('Leave request rejected successfully');
+        alert('Leave request rejected successfully');
       },
       error => {
         // Handle error, if needed
         console.error('Error rejecting leave request:', error);
+        alert('Error rejecting leave request ')
       }
     );
   }

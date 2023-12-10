@@ -2,14 +2,18 @@
 <app-navbar></app-navbar>
 <div class="card divConge" >
 <div class="card-body">
+  <button>historique Refusé</button>
+      <button>historique accepté</button>
     <div class="chart-area">
+      
         <div class="table-responsive">
+         
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">date conge</th>
-                        <th scope="col">heure</th>
+                        <th scope="col">debut de conge</th>
+                        <th scope="col">fin de conge </th>
                             <th scope="col"> description</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
@@ -20,8 +24,8 @@
         <tr>
    
       <th scope="row">{{ conge.employeid }}</th>
-      <td>{{ conge.endDate }} </td>
-        <td>{{ conge.startDate }}</td>
+      <td>{{ conge.endDate|date }} </td>
+        <td>{{ conge.startDate|date }}</td>
       <td>{{ conge.description }}</td>
       <td>
       <button (click)="validerConge(conge.id)">Valider</button>

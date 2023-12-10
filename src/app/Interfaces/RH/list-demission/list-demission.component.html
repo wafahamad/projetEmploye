@@ -20,7 +20,7 @@
         <tr>
    
       <th scope="row">{{ demission.employe }}</th>
-      <td>{{ demission.submissionDate }} </td>
+      <td>{{ demission.submissionDate|date }} </td>
         <td>{{ demission.reason }}</td>
       <td>
       <button (click)="approveDemission(demission.employe.id,demission.id)">Valider</button>

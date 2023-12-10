@@ -15,7 +15,7 @@ export class DemissionServiceService {
     return this.http.post<any>(url, { employeeId, data });
   }
   getDemissions(): Observable<Demission[]> {
-    return this.http.get<Demission[]>(`${this.api}/demssions`); // Assurez-vous que l'URL correspond à votre backend
+    return this.http.get<Demission[]>(`${this.api}/demissions`); 
   }
   approveDemission(employeeId: number, demissionId: number): Observable<Demission> {
     const url = `${this.api}/${employeeId}/demissions/${demissionId}/approve`;
