@@ -1,115 +1,153 @@
-<app-navbar-emp></app-navbar-emp> <!--appel de la navBar-->
+<app-navbar-emp></app-navbar-emp>
+<!--appel de la navBar-->
 <!--contenu de page-->
 <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
-    <!--bloc des contenaires de l'enregistrement -->
-    <div class="row justify-content-center">
-        <!--pour enregistrer les heures de départ et arrivés-->
-        <div class="col-xl-3 col-md-6 mb-4 ">
-            <div class="card border-left-primary shadow h-100 py-2" style="cursor: pointer;">
-                <!--appel de fonction openDD pour ouvrir popup de l'enregistrement-->
-                <div class="card-body" (click)="AjouterHeureArriv()">
-                    <!-- div de la ligne des contenaires des enregistrements les heures-->
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2" style="text-align: center; ">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Enregistrer
-                            </div>
+  <!--bloc des contenaires de l'enregistrement -->
+  <div class="row justify-content-center">
+    <!--pour enregistrer les heures de départ et arrivés-->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div
+        class="card border-left-primary shadow h-100 py-2"
+        style="cursor: pointer"
+      >
+        <!--appel de fonction openDD pour ouvrir popup de l'enregistrement-->
+        <div class="card-body" (click)="AjouterHeureArriv()">
+          <!-- div de la ligne des contenaires des enregistrements les heures-->
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2" style="text-align: center">
+              <div
+                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+              >
+                Enregistrer
+              </div>
 
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                Heures Arrivé
-                            </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800" *ngIf="heurArriv">
-                                {{heurArriv|date:'shortTime'}}
-                            </div>
-                        </div>
-
-                        <div class="col-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
-                                class="bi bi-floppy2" viewBox="0 0 16 16">
-                                <path
-                                    d="M1.5 0h11.586a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13A1.5 1.5 0 0 1 1.5 0ZM1 1.5v13a.5.5 0 0 0 .5.5H2v-4.5A1.5 1.5 0 0 1 3.5 9h9a1.5 1.5 0 0 1 1.5 1.5V15h.5a.5.5 0 0 0 .5-.5V2.914a.5.5 0 0 0-.146-.353l-1.415-1.415A.5.5 0 0 0 13.086 1H13v3.5A1.5 1.5 0 0 1 11.5 6h-7A1.5 1.5 0 0 1 3 4.5V1H1.5a.5.5 0 0 0-.5.5Zm9.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-1Z" />
-                            </svg>
-                        </div>
-
-                    </div>
-                </div>
-
-
+              <div class="h5 mb-0 font-weight-bold text-gray-800">
+                Heures Arrivé
+              </div>
+              <div
+                class="h5 mb-0 font-weight-bold text-gray-800"
+                *ngIf="heurArriv"
+              >
+                {{ heurArriv | date : "shortTime" }}
+              </div>
             </div>
+
+            <div class="col-auto">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                fill="currentColor"
+                class="bi bi-floppy2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M1.5 0h11.586a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13A1.5 1.5 0 0 1 1.5 0ZM1 1.5v13a.5.5 0 0 0 .5.5H2v-4.5A1.5 1.5 0 0 1 3.5 9h9a1.5 1.5 0 0 1 1.5 1.5V15h.5a.5.5 0 0 0 .5-.5V2.914a.5.5 0 0 0-.146-.353l-1.415-1.415A.5.5 0 0 0 13.086 1H13v3.5A1.5 1.5 0 0 1 11.5 6h-7A1.5 1.5 0 0 1 3 4.5V1H1.5a.5.5 0 0 0-.5.5Zm9.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-1Z"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
-        <div class="col-xl-3 col-md-6 mb-4 ">
-            <div class="card border-left-primary shadow h-100 py-2" style="cursor: pointer;">
-                <!--appel de fonction openDA pour ouvrir popup de l'enregistrement-->
-                <div class="card-body" (click)="AjouterHeureDep()">
-                    <!-- div de la ligne des contenaires des enregistrements les heures-->
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2" style="text-align: center; ">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Enregistrer
-                            </div>
-
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                Heures Départ
-                            </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800" *ngIf="heurDep">
-
-
-                                {{heurDep|date:'shortTime'}}
-                            </div>
-                        </div>
-
-                        <div class="col-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
-                                class="bi bi-floppy2" viewBox="0 0 16 16">
-                                <path
-                                    d="M1.5 0h11.586a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13A1.5 1.5 0 0 1 1.5 0ZM1 1.5v13a.5.5 0 0 0 .5.5H2v-4.5A1.5 1.5 0 0 1 3.5 9h9a1.5 1.5 0 0 1 1.5 1.5V15h.5a.5.5 0 0 0 .5-.5V2.914a.5.5 0 0 0-.146-.353l-1.415-1.415A.5.5 0 0 0 13.086 1H13v3.5A1.5 1.5 0 0 1 11.5 6h-7A1.5 1.5 0 0 1 3 4.5V1H1.5a.5.5 0 0 0-.5.5Zm9.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-1Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!--pour enregistrer les heures supplémentaires-->
-
-
-    </div>
-
-    <!-- end containers-->
-
-
-    <!--bloc pour la courbe de perfermance-->
-    <div class="col-xl-8 col-lg-7">
-        <div class="card shadow mb-4">
-            <!-- Card Header - Dropdown -->
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Ma perfermance</h6>
-
-            </div>
-            <!-- Card Body -->
-            <div class="card-body">
-                <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end bloc courbe perfermance-->
-    <div>
-        <h3>Comments:</h3>
-        <ul>
-          <li *ngFor="let comment of comments">{{ comment.content }} - {{ comment.date | date:'short' }}</li>
-        </ul>
       </div>
+    </div>
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div
+        class="card border-left-primary shadow h-100 py-2"
+        style="cursor: pointer"
+      >
+        <!--appel de fonction openDA pour ouvrir popup de l'enregistrement-->
+        <div class="card-body" (click)="AjouterHeureDep()">
+          <!-- div de la ligne des contenaires des enregistrements les heures-->
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2" style="text-align: center">
+              <div
+                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+              >
+                Enregistrer
+              </div>
 
+              <div class="h5 mb-0 font-weight-bold text-gray-800">
+                Heures Départ
+              </div>
+              <div
+                class="h5 mb-0 font-weight-bold text-gray-800"
+                *ngIf="heurDep"
+              >
+                {{ heurDep | date : "shortTime" }}
+              </div>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-    <!-- Github buttons -->
+            <div class="col-auto">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                fill="currentColor"
+                class="bi bi-floppy2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M1.5 0h11.586a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13A1.5 1.5 0 0 1 1.5 0ZM1 1.5v13a.5.5 0 0 0 .5.5H2v-4.5A1.5 1.5 0 0 1 3.5 9h9a1.5 1.5 0 0 1 1.5 1.5V15h.5a.5.5 0 0 0 .5-.5V2.914a.5.5 0 0 0-.146-.353l-1.415-1.415A.5.5 0 0 0 13.086 1H13v3.5A1.5 1.5 0 0 1 11.5 6h-7A1.5 1.5 0 0 1 3 4.5V1H1.5a.5.5 0 0 0-.5.5Zm9.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-1Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--pour enregistrer les heures supplémentaires-->
+  </div>
 
+  <!-- end containers-->
+
+  <!--bloc pour la courbe de perfermance-->
+  <div class="col-xl-8 col-lg-7">
+    <div class="card shadow mb-4">
+      <!-- Card Header - Dropdown -->
+      <div
+        class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+      >
+        <h6 class="m-0 font-weight-bold text-primary">Ma perfermance</h6>
+      </div>
+      <!-- Card Body -->
+      <div class="card-body">
+        <div class="chart-area">
+          <div id="chart">
+            <apx-chart
+              [series]="chartOptions.series"
+              [chart]="chartOptions.chart"
+              [plotOptions]="chartOptions.plotOptions"
+              [xaxis]="chartOptions.xaxis"
+              [colors]="chartOptions.colors"
+              [fill]="chartOptions.fill"
+              [legend]="chartOptions.legend"
+              [grid]="chartOptions.grid"
+            ></apx-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end bloc courbe perfermance-->
+  <div>
+    <h3>Comments:</h3>
+    <ul>
+      <li *ngFor="let comment of comments">
+        {{ comment.content }} - {{ comment.date | date : "short" }}
+      </li>
+    </ul>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <!-- Github buttons -->
 </main>

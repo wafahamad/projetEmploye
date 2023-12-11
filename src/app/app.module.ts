@@ -10,7 +10,7 @@ import { NavbarComponent } from './Interfaces/RH/navbar/navbar.component';
 import { NavbarEmpComponent } from './Interfaces/Employe/navbar-emp/navbar-emp.component';
 import { LoginComponent } from './Interfaces/Employe/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListEmployeesDepComponent } from './Interfaces/RH/list-employees-dep/list-employees-dep.component';
 import { LoginRhComponent } from './Interfaces/RH/login-rh/login-rh.component';
 import { ListCalendrierComponent } from './Interfaces/Employe/list-calendrier/list-calendrier.component';
@@ -22,6 +22,7 @@ import { DemandeCongeComponent } from './Interfaces/Employe/demande-conge/demand
 import { DemandeDemissionComponent } from './Interfaces/Employe/demande-demission/demande-demission.component';
 import { CreerCommentComponent } from './Interfaces/RH/creer-comment/creer-comment.component';
 import { ListDemissionComponent } from './Interfaces/RH/list-demission/list-demission.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,16 +42,17 @@ import { ListDemissionComponent } from './Interfaces/RH/list-demission/list-demi
     DemandeCongeComponent,
     DemandeDemissionComponent,
     CreerCommentComponent,
-    ListDemissionComponent
+    ListDemissionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgApexchartsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

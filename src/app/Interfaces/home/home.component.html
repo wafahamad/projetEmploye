@@ -1,32 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <style>
+      body {
+        background: url("./../../../assets/home.jpg") center/cover no-repeat
+          fixed;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        animation: backgroundAnimation 20s linear infinite;
+      }
 
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      @keyframes backgroundAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
 
-</head>
+        50% {
+          background-position: 100% 50%;
+        }
 
-<body class="background-image">
+        100% {
+          background-position: 0% 50%;
+        }
+      }
 
+      .container {
+        margin-top: 50px;
+        color: #fff;
+      }
+
+      .buttonLogin {
+        font-size: 18px;
+        background-color: #5bc0de; /* Light blue background color */
+        color: #fff; /* Text color */
+        border: none; /* Remove border */
+        transition: background-color 0.3s; /* Add transition effect */
+      }
+
+      .buttonLogin:hover {
+        background-color: #007bff; /* Darker blue background color on hover */
+      }
+
+      .buttonLogin i {
+        margin-right: 10px;
+      }
+
+      .animated-text {
+        animation: fadeInUp 1.5s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .card-body {
+        background-color: #f8f9fa; /* Light grey background color for card body */
+        color: #000; /* Text color for card body */
+        border: none;
+        padding: 10px; /* Add padding for better appearance */
+        border-radius: 10px; /* Add border-radius for rounded corners */
+      }
+
+      .card-body p {
+        margin-bottom: 5px;
+      }
+
+      .card-body p i {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="p-3">
-                    <button class="btn btn-dark rounded-pill buttonLogin" (click)="loginEmploye()">Login en tant qu'employé</button>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="p-3">
-                    <button class="btn btn-dark rounded-pill buttonLogin" (click)="loginRh()">Login en tant que RH</button>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="p-3">
+            <button
+              class="btn btn-dark rounded-pill buttonLogin"
+              (click)="loginEmploye()"
+            >
+              <i class="fas fa-user"></i> Login en tant qu'employé
+            </button>
+          </div>
         </div>
+        <div class="col-md-12">
+          <div class="p-3">
+            <button
+              class="btn btn-dark rounded-pill buttonLogin"
+              (click)="loginRh()"
+            >
+              <i class="fas fa-users"></i> Login en tant que RH
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-4 animated-text">
+          <div class="card bg-transparent text-white">
+            <div class="card-body">
+              <h5 class="card-title">RhMangement</h5>
+              <p class="card-text">
+                <i class="fas fa-map-marker-alt"></i> Tunisie - Tunis
+              </p>
+              <p class="card-text">
+                <i class="fas fa-phone"></i> [+216 99 978 63] <br />
+                <i class="fas fa-envelope"></i> RhMangement@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5 animated-text">
+        <div class="col-md-12">
+          <h2>Fonctionnalités du site</h2>
+          <div class="card-body">
+            <p>
+              <i class="fas fa-clock"></i> Enregistrement des heures d'entrée et
+              de sortie.
+            </p>
+            <p>
+              <i class="fas fa-clock"></i> Enregistrement des heures
+              supplémentaires.
+            </p>
+            <p>
+              <i class="far fa-calendar-plus"></i> Demande de congé en ligne.
+            </p>
+          </div>
+          <!-- Add more features with icons -->
+        </div>
+      </div>
     </div>
-    <div>
-        <!-- Le contenu de votre page ira ici -->
-
-
-    </div>
-</body>
-
+  </body>
 </html>
